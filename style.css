@@ -5,8 +5,8 @@
    ---color04: #3080AA;
    ---color05: #127BCF;
    ---color06: #286BA4;
-   ---color07: black;
-
+   ---color07: #000000;
+   ---color08: #d946ef;
 }
 
 * {
@@ -19,7 +19,8 @@
 body {
    background-color: rgb(27, 27, 27);
 }
-form{
+
+form {
    display: flex;
    flex-direction: column;
    align-items: center;
@@ -27,39 +28,176 @@ form{
    background-color: #141414;
    gap: 30px;
    border-radius: 10px;
-   padding: 20px 20px;
-   
-   
+   padding: 40px 20px;
+
+
    /* Box shadow para contraste com fundo preto */
+   box-shadow:
+
+      0 0 10px rgba(0, 225, 255, 0.2),
+      0 0 20px rgba(217, 70, 239, 0.4),
+      0 0 30px rgba(0, 0, 0, 0.4);
+
+}
+
+form h1 {
+   font-size: 34px;
+   font-weight: 800;
+   color: var(---color02);
+   letter-spacing: 3px;
+   text-shadow:
+      0 0 4px #00e1ff,
+      0 0 8px #00e1ff;
+   animation: blink 1s infinite;
+}
+
+@keyframes blink {
+
+   0%,
+   100% {
+      opacity: 1;
+   }
+
+   50% {
+      opacity: 0;
+   }
+}
+
+form h1 {
+   font-size: 34px;
+   font-weight: 800;
+   color: var(--color02);
+   /* Corrigido: era '---color02' */
+   letter-spacing: 3px;
+   text-shadow:
+      0 0 4px #00e1ff,
+      0 0 8px #00e1ff;
+   animation: blink 1s infinite;
+}
+
+form label {
+   font-size: 16pt;
+   color: var(---color02);
+   font-weight: 500;
+}
+
+form div {
+   display: flex;
+   align-items: start;
+   justify-content: center;
+   flex-direction: column;
+   gap: 10px;
+}
+
+form div input {
+   width: 290px;
+   height: 40px;
+   border: 1px solid var(---color02);
+   /* Corrigido de ---color02 para --color02 */
+   border-radius: 10px;
+   background-color: transparent;
+   padding: 0 10px;
+   /* Ajustado para evitar excesso de altura */
+   font-size: 16px;
+   color: var(--color02);
+   /* Garante que o texto fique visível */
+   outline: none;
+   /* Remove o contorno padrão ao focar */
+   transition: border-color 0.3s ease;
+}
+
+form div input:focus {
    box-shadow:
       0 0 10px rgba(0, 225, 255, 0.2),
       0 0 20px rgba(40, 107, 164, 0.2),
       0 0 30px rgba(0, 0, 0, 0.4);
+   /* Destaque ao focar, se desejar */
+}
 
+form div input::placeholder {
+   color: var(---color08);
+   text-shadow:
+      0 0 1px var(---color08),
+      0 0 3px var(---color08);
+   opacity: 0.5;
 }
-form div{
+
+form div button {
    display: flex;
-   align-items: start  ;
+   width: 290px;
+   height: 50px;
+   display: flex;
    justify-content: center;
-   flex-direction: column;
-   gap: 15px;
-}
-form div input{
-   width: 100% ;
-   height: 40px;
-   border: solid 2px var(---color02);
+   align-items: center;
    border-radius: 10px;
-   background-color: transparent;
-   padding: 10px 10px;
+   border: none;
+   margin: 10px 0px;
 }
-form div button{
-   display:flex;
-}
-#buttonEscolher{
-   width:1px;
+
+#buttonEscolher {
+
    height: 45px;
-   background-color: #42a1ad;
+
+   background: linear-gradient(135deg, #00e1ff, #007bff);
+   box-shadow:
+      0px 0px 10px var(---color02);
+
+       font-size: 1.5rem;
+      font-weight: bold;
+      cursor: pointer;
+      text-shadow: 0 0 5px #00e1ff;
+   color: var(---color01);
 }
+
+.btn_cancel {
+   background: linear-gradient(135deg, #d946ef, #8b5cf6);
+   box-shadow:
+      0px 0px 10px var(---color08);
+
+         font-size: 1.5rem;
+      font-weight: bold;
+      cursor: pointer;
+      text-shadow: 0 0 5px #d946ef;
+   color: var(---color01);
+}  
+.btn_cadastra{
+  position: relative;
+  padding: 10px;
+  border-radius: 12px;
+  background: #000; /* Cor de fundo interna */
+  z-index: 0;
+  overflow: hidden;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(---color01);
+}
+
+.btn_cadastra::before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(270deg, #00e1ff, #d946ef, #00e1ff);
+  background-size: 600% 600%;
+  animation: borderAnimation 6s ease infinite;
+  z-index: -1;
+  border-radius: 14px;
+}
+
+@keyframes borderAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
 .container {
    margin-top: 30px;
    background-color: #000000;
@@ -215,6 +353,7 @@ form div button{
       .logo img {
          width: 90px;
          height: 90px;
+         margin-top: 14px;
       }
 
       #menu_icon {
@@ -225,8 +364,7 @@ form div button{
          cursor: pointer;
 
          text-shadow:
-            0 0 10px #00e1ff,
-            0 0 20px #00e1ff
+            0 0 2 px #00e1ff
       }
    }
 }
@@ -314,40 +452,52 @@ form div button{
       align-items: center;
       margin-top: 60px;
       background-color: #141414;
-      padding: 20px 20px;
+      padding: 40px 20px;
       border-radius: 20px;
       margin-bottom: 40px;
 
 
-   /* Box shadow para contraste com fundo preto */
-   box-shadow:
-      0 0 10px rgba(0, 225, 255, 0.2),
-      0 0 20px rgba(40, 107, 164, 0.2),
-      0 0 30px rgba(0, 0, 0, 0.4);
+      /* Box shadow para contraste com fundo preto */
+      box-shadow:
+         0 0 10px rgba(0, 225, 255, 0.2),
+         0 0 20px rgba(217, 70, 239, 0.4),
+         0 0 30px rgba(0, 0, 0, 0.4);
+   }
+
+   .countdown h2 {
+      font-size: 30px;
+      font-weight: 800;
+      letter-spacing: 3px;
+      color: var(---color08);
+
+      text-shadow:
+         0 0 4px var(---color08),
+         0 0 8px var(---color08);
+      animation: blink 1s infinite;
+
+   }
+
 }
 
-   }
+.box {
+   width: 130px;
+   height: 100px;
+   border-radius: 10px;
+   background-color: #070707;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   flex-direction: column;
 
-   .box {
-      width: 130px;
-      height: 100px;
-      border-radius: 10px;
-      background-color: #070707;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-direction: column;
-
-      /* Box shadow estiloso com cores combinadas */
+   /* Box shadow estiloso com cores combinadas */
 
 
-      box-shadow:
-         0 0 6px 2px #00e1ff66,
-         0 0 10px 2px #3894B066,
-         0 0 14px 2px #3080AA66,
-         0 0 18px 2px #127BCF66,
-         0 0 22px 2px #286BA466;
-   }
+   box-shadow:
+
+      0 0 10px rgba(0, 225, 255, 0.2),
+      0 0 20px rgba(217, 70, 239, 0.4),
+      0 0 30px rgba(0, 0, 0, 0.4);
+}
 
 
 
@@ -364,7 +514,7 @@ form div button{
 
    .home_content .subtitle {
       color: #6d6d6d;
-      font-size: 15pt;
+      font-size: 17pt;
       font-weight: 550;
       margin-bottom: 40px;
    }
@@ -466,11 +616,40 @@ form div button{
 }
 
 
-.value{
+.value {
    font-size: 24pt;
    font-weight: 700;
    color: var(---color02);
 }
-.name{
+
+.name {
    color: var(---color03);
+}
+.home02{
+   height: 85vh;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+.home02_content{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   gap: 60px;
+  
+}
+.home02_content h2{
+   text-align: center;
+   font-size: 40px;
+   font-weight: 800;
+ 
+
+}
+.home02_content h2 span{
+   text-align: justify;
+      color: #6d6d6d;
+      font-size: 17pt;
+      font-weight: 550;
+      margin-bottom: 40px;
 }

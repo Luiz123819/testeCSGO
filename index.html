@@ -69,7 +69,7 @@
 
 
                 <div class="countdown">
-                    <h2 style="font-size: 24tt; font-weight: 600; color:#d946ef;text-align: center;">Contagem Regressiva
+                    <h2>CONTAGEM REGRESSIVA
                     </h2>
                     <div class="box">
                         <span class="value" data-dias>00</span>
@@ -98,7 +98,21 @@
             </div>
         </section>
 
+        <section class="home02">
+            <div class="home02_content">
 
+                <h2><span style="font-size:40px;color : #d946ef;"> SOBRE </span> O CAMPEONATO</h2>
+
+            <span style="text-align: justify; color: #6d6d6d;" >
+                <b>CS:GO PROJECT CTRL - Z a</b> é um campeonato de Counter-Strike: Global Offensive organizado por uma
+                turma de estudantes de Tecnologia da Informação. O projeto tem como objetivo aplicar conhecimentos de TI
+                na prática promovendo integração entre os alunos desenvolvimento de habilidades de organização de
+                eventos e, claro, muita diversão e competição saudável.
+            </span>
+
+            </div>
+            
+        </section>
         <!-------------------------------Contador ------------------------------------------------------>
 
 
@@ -106,7 +120,7 @@
         <div class="row">
             <div class="col-sm-12">
                 <form action="cadastrar.php" method="post" class="" enctype="multipart/form-data ">
-                    <h1 class="text-center">Cadastrar Equipe</h1>
+                    <h1 class="text-center">SE INSCREVER</h1>
                     <div>
                         <label for="nome_equipe">Nome Equipe</label>
                         <input type="text" name="nome_equipe" class="" id="nome_equipe" placeholder="Digite Aqui..."
@@ -118,11 +132,11 @@
 
 
                             <input type="text" name="campo_img" id="campo_img" style="display:none;">
-                           
+
                         </div>
                     </div>
                     <div class="row mt-3">
-                          <div class="col-sm-4">
+                        <div class="col-sm-4">
                             <label for="nome_usuario01">Integrante 01</label>
                             <input type="text" name="nome_usuario01" class="" id="nome_usuario01"
                                 placeholder="Digite Aqui..." required />
@@ -146,11 +160,11 @@
                             <input type="text" name="celular_usuario02" class="" id="celular_usuario02"
                                 placeholder="(99) 99999-9999" required />
                         </div>
-                      
+
                     </div>
 
                     <div class="row mt-3">
-                          <div class="col-sm-4">
+                        <div class="col-sm-4">
                             <label for="nome_usuario03">Integrante 03</label>
                             <input type="text" name="nome_usuario03" class="" id="nome_usuario03"
                                 placeholder="Digite Aqui..." required />
@@ -159,10 +173,10 @@
                             <input type="text" name="celular_usuario03" class="" id="celular_usuario03"
                                 placeholder="(99) 99999-9999" required />
                         </div>
-                    
+
                     </div>
-                    <div class="row mt-3" >
-                            <div class="col-sm-4">
+                    <div class="row mt-3">
+                        <div class="col-sm-4">
                             <label for="nome_usuario04">Integrante 04</label>
                             <input type="text" name="nome_usuario04" class="" id="nome_usuario04"
                                 placeholder="Digite Aqui..." required />
@@ -186,13 +200,16 @@
                     </div>
 
                     <div class="mt-4 d-flex gap-2">
+
+                        <button class="" id="buttonEscolher" onclick="EscolherImg()">Escolher
+                            Logo</button>
                         <input type="hidden" name="txtAcao" value="Cadastrar" />
-                        <button type="reset" class="">Cancelar</button>
-                        <button class="" onclick="Enviar('cadastra')">
-                            Cadastrar
-                        </button>
-                         <button class="" id="buttonEscolher" onclick="EscolherImg()">Escolher
-                                Logo</button>
+                       
+                        <button type="reset" class="btn_cancel">Cancelar</button>
+                          <button class=" btn_cadastra" onclick="Enviar('cadastra')">
+                            Se Inscrever</button>
+
+
                     </div>
                 </form>
             </div>
