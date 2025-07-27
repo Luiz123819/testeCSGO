@@ -194,17 +194,18 @@ body {
 /* ====================================== */
 
 #home_section {
-   height: 130vh;
+   height: calc(100vh -90px);
    display: flex;
    align-items: center;
    justify-content: center;
-   gap: 40px;
+   gap:4rem;
    flex-direction: column;
    position: relative;
    z-index: 7777;
 
 
    .home_content h1 {
+
       font-size: 70px;
       text-align: center;
       font-weight: 1000;
@@ -308,14 +309,15 @@ body {
       font-size: 60px;
       text-align: center;
       width: 100%;
-      margin-top: 280px;
-
+      margin-top: 140px;
+      margin-bottom: 40px;
    }
 
    .home_content .subtitle {
-      color: #c4c4c4;
+      color: #6d6d6d;
       font-size: 15pt;
       font-weight: 550;
+      margin-bottom: 40px;
    }
 
    @keyframes flutuar {
