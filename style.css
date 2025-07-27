@@ -19,7 +19,47 @@
 body {
    background-color: rgb(27, 27, 27);
 }
+form{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: start;
+   background-color: #141414;
+   gap: 30px;
+   border-radius: 10px;
+   padding: 20px 20px;
+   
+   
+   /* Box shadow para contraste com fundo preto */
+   box-shadow:
+      0 0 10px rgba(0, 225, 255, 0.2),
+      0 0 20px rgba(40, 107, 164, 0.2),
+      0 0 30px rgba(0, 0, 0, 0.4);
 
+}
+form div{
+   display: flex;
+   align-items: start  ;
+   justify-content: center;
+   flex-direction: column;
+   gap: 15px;
+}
+form div input{
+   width: 100% ;
+   height: 40px;
+   border: solid 2px var(---color02);
+   border-radius: 10px;
+   background-color: transparent;
+   padding: 10px 10px;
+}
+form div button{
+   display:flex;
+}
+#buttonEscolher{
+   width:1px;
+   height: 45px;
+   background-color: #42a1ad;
+}
 .container {
    margin-top: 30px;
    background-color: #000000;
@@ -198,7 +238,7 @@ body {
    display: flex;
    align-items: center;
    justify-content: center;
-   gap:4rem;
+   gap: 4rem;
    flex-direction: column;
    position: relative;
    z-index: 7777;
@@ -267,41 +307,50 @@ body {
    }
 
    .countdown {
-   display: flex;
-   flex-wrap: wrap;
-   gap: 40px;
-   justify-content: center;
-   align-items: center;
-   margin-top: 60px;
-   background-color: #292626;
-   padding: 20px 20px;
-   border-radius: 20px;
-   margin-bottom: 40px;
-}
+      display: flex;
+      flex-wrap: wrap;
+      gap: 40px;
+      justify-content: center;
+      align-items: center;
+      margin-top: 60px;
+      background-color: #141414;
+      padding: 20px 20px;
+      border-radius: 20px;
+      margin-bottom: 40px;
 
-.box {
-   width: 130px;
-   height: 100px;
-   border-radius: 10px;
-   background-color: #070707;
-   display: flex;
-   align-items: center;
-   justify-content: center;
-   flex-direction: column;
 
-   /* Box shadow estiloso com cores combinadas */
-  
-
+   /* Box shadow para contraste com fundo preto */
    box-shadow:
-      0 0 6px 2px #00e1ff66,
-      0 0 10px 2px #3894B066,
-      0 0 14px 2px #3080AA66,
-      0 0 18px 2px #127BCF66,
-      0 0 22px 2px #286BA466;
+      0 0 10px rgba(0, 225, 255, 0.2),
+      0 0 20px rgba(40, 107, 164, 0.2),
+      0 0 30px rgba(0, 0, 0, 0.4);
 }
 
+   }
 
-}
+   .box {
+      width: 130px;
+      height: 100px;
+      border-radius: 10px;
+      background-color: #070707;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+
+      /* Box shadow estiloso com cores combinadas */
+
+
+      box-shadow:
+         0 0 6px 2px #00e1ff66,
+         0 0 10px 2px #3894B066,
+         0 0 14px 2px #3080AA66,
+         0 0 18px 2px #127BCF66,
+         0 0 22px 2px #286BA466;
+   }
+
+
+
 
 @media screen and (max-width:768px) {
 
@@ -309,7 +358,7 @@ body {
       font-size: 60px;
       text-align: center;
       width: 100%;
-      margin-top: 140px;
+      margin-top: 120px;
       margin-bottom: 40px;
    }
 
@@ -340,8 +389,8 @@ body {
       align-items: center;
       justify-content: center;
       gap: 40px;
-      margin-top: 30px;
-      margin-bottom: 30px;
+      margin-top: 60px;
+      margin-bottom: 60px;
    }
 
    .home_buttons .btn_home_Se_Increver {
@@ -389,7 +438,7 @@ body {
          0 0 20px #d946ef,
          0 0 40px #7c3aed;
       transition: transform 0.2s ease, box-shadow 0.2s ease;
-
+      animation: button_pulse 2s ease-in-out infinite
    }
 
    .home_buttons .btn_home_Ver_Regras:hover {
@@ -414,4 +463,14 @@ body {
 
    }
 
+}
+
+
+.value{
+   font-size: 24pt;
+   font-weight: 700;
+   color: var(---color02);
+}
+.name{
+   color: var(---color03);
 }
