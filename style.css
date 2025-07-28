@@ -323,7 +323,9 @@ text-align: center;
       top: 20px;
       color: var(---color02);
         text-shadow:
-            0 0 2 px #00e1ff
+            0 0 2 px #00e1ff;
+             transition: all 0.3s ease;
+
    }
 
    nav .logo img {
@@ -681,6 +683,79 @@ text-align: center;
    text-align: justify;
    color: #6d6d6d;
    font-size: 17pt;
-   font-weight: 550;
+   font-weight:800;
    margin-bottom: 40px;
+}
+.home03{
+   height: 230vh !important;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+.home03 .home_03_regras_card h1{
+   text-align: center;
+   font-size: 40px;
+   font-weight:800 ;
+   margin-bottom: 30px;
+   
+}
+.home03 .home_03_regras_card h1 span{
+   font-size: 40px;
+   font-weight: 800;
+   color: var(---color08);
+}
+.home03 div{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   flex-direction: column;
+  
+}
+.home03 .home_03_regras_card {
+   text-align: start;
+   font-size: 18pt;
+   font-weight: 500;
+   margin-bottom: 100px;
+   gap: 30px;
+   background-color: #141414;
+   animation: pulseShadow 7s infinite ease-in-out;
+   transition: box-shadow 0.3s ease-in-out;
+   border-radius: 20px;
+filter: brightness(1.1);
+}
+
+@keyframes pulseShadow {
+   0%   { box-shadow: 0 0 15px var(---color08); }
+   20%  { box-shadow: 0 0 15px var(---color02); }
+   40%  { box-shadow: 0 0 15px var(---color03); }
+   60%  { box-shadow: 0 0 15px var(---color04); }
+   80%  { box-shadow: 0 0 15px var(---color05); }
+   100% { box-shadow: 0 0 15px var(---color06); }
+}
+.home03 .home_03_regras_card span{
+   text-align: justify;
+      color: #6d6d6d;
+      font-size: 17pt;
+      font-weight: 550;
+      margin-bottom: 40px;
+  
+}
+.home03 .home_03_regras_card span b{
+   font-size: 24px;
+   color: var(---color08);
+}
+.home03 .home_03_regras_card span p {
+   font-weight: 500;
+   margin-top: 20px;
+   color: var(---color02);
+}
+.home03 .home_03_regras_card span p i{
+   color: var(---color06);
+   margin-right: 10px;
+}
+.home_03_regras_card{
+   padding: 10px 20px;
+}
+.home_03_regras_card{
+
 }

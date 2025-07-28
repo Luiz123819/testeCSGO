@@ -18,215 +18,263 @@
 
 <body>
     <?php 
-    include_once("carrega_Imagens.php")
+    include_once("carrega_Imagens.php");
     ?>
 
-
-    <div class="nav_bar">
-        <div class="nav_bar_content">
-            <div class="logo">
-                <img src="imagens/logoProjectZ.png" alt="">
-            </div>
-
-            <div class="list_button_div_nav_bar">
-                <ul class="list_ul">
-                    <a href="#">
-                        <li class="list_item">HOME</li>
-                    </a>
-                    <a href="#">
-                        <li class="list_item">SOBRE</li>
-                    </a>
-                    <a href="#">
-                        <li class="list_item">REGRAS</li>
-                    </a>
-                </ul>
-
-
-                <button class="btn_inscrever">Se Inscrever</button>
-            </div>
-
-            <div class="menu_mobile">
-                <i class="fa-solid fa-bars" id="menu_icon"></i>
-
-                <ul class="list_ul">
-                    <li class="list_item"><a href="#">HOME</a></li>
-                    <li class="list_item"><a href="#">SOBRE</a></li>
-                    <li class="list_item"><a href="#">REGRAS</a></li>
-                </ul>
-
-            </div>
-        </div>
-    </div>
-
-    <div class="container" style="z-index:8888;">
-        <section id="home_section">
-            <div class="home_content">
-                <h1><span>CS:GO</span> PROJECT CTRL-Z</h1>
-                <span class="subtitle">
-                    O maior campeonato de Couter-Strike do Project Ctrl-Z
-                </span>
-
-
-
-                <div class="countdown">
-                    <h2>CONTAGEM REGRESSIVA
-                    </h2>
-                    <div class="box">
-                        <span class="value" data-dias>00</span>
-                        <span class="name">DIAS</span>
-                    </div>
-                    <div class="box">
-                        <span class="value" data-hora>00</span>
-                        <span class="name">HORAS</span>
-                    </div>
-                    <div class="box">
-                        <span class="value" data-minutos>00</span>
-                        <span class="name">MINUTOS</span>
-                    </div>
-                    <div class="box">
-                        <span class="value" data-segundos>00</span>
-                        <span class="name">SEGUNDOS</span>
-
-
-                    </div>
-                </div>
-
-                <div class="home_buttons">
-                    <button class="btn_home_Se_Increver">Se Increver</button>
-                    <button class="btn_home_Ver_Regras">Ver Regras</button>
-                </div>
-            </div>
-        </section>
-
-        <section class="home02">
-            <div class="home02_content">
-
-                <h2><span style="font-size:40px;color : #d946ef;"> SOBRE </span> O CAMPEONATO</h2>
-
-            <span style="text-align: justify; color: #6d6d6d;" >
-                <b>CS:GO PROJECT CTRL - Z a</b> é um campeonato de Counter-Strike: Global Offensive organizado por uma
-                turma de estudantes de Tecnologia da Informação. O projeto tem como objetivo aplicar conhecimentos de TI
-                na prática promovendo integração entre os alunos desenvolvimento de habilidades de organização de
-                eventos e, claro, muita diversão e competição saudável.
-            </span>
-
-            </div>
-            
-        </section>
-        <!-------------------------------Contador ------------------------------------------------------>
-
-
-        <!-- ------------------------------------------------------------------------- FORMS ------------------------------------------------- -->
-        <div class="row">
-            <div class="col-sm-12">
-                <form action="cadastrar.php" method="post" class="" enctype="multipart/form-data ">
-                    <h1 class="text-center">SE INSCREVER</h1>
-                    <div>
-                        <label for="nome_equipe">Nome Equipe</label>
-                        <input type="text" name="nome_equipe" class="" id="nome_equipe" placeholder="Digite Aqui..."
-                            required />
-
-                    </div>
-                    <div class="row">
-                        <div class="col-sm-4">
-
-
-                            <input type="text" name="campo_img" id="campo_img" style="display:none;">
-
-                        </div>
-                    </div>
-                    <div class="row mt-3">
-                        <div class="col-sm-4">
-                            <label for="nome_usuario01">Integrante 01</label>
-                            <input type="text" name="nome_usuario01" class="" id="nome_usuario01"
-                                placeholder="Digite Aqui..." required />
-                        </div>
-
-                        <div class="col-sm-4">
-                            <input type="text" name="celular_usuario01" class="" id="celular_usuario01"
-                                placeholder="(99) 99999-9999" required />
-                        </div>
-                    </div>
-
-                    <!-- Repetição para os outros usuários -->
-                    <div class="row mt-3">
-                        <div class="col-sm-4">
-                            <label for="nome_usuario02">Integrante 02
-                            </label>
-                            <input type="text" name="nome_usuario02" class="" id="nome_usuario02"
-                                placeholder="Digite Aqui..." required />
-                        </div>
-                        <div class="col-sm-4">
-                            <input type="text" name="celular_usuario02" class="" id="celular_usuario02"
-                                placeholder="(99) 99999-9999" required />
-                        </div>
-
-                    </div>
-
-                    <div class="row mt-3">
-                        <div class="col-sm-4">
-                            <label for="nome_usuario03">Integrante 03</label>
-                            <input type="text" name="nome_usuario03" class="" id="nome_usuario03"
-                                placeholder="Digite Aqui..." required />
-                        </div>
-                        <div class="col-sm-4">
-                            <input type="text" name="celular_usuario03" class="" id="celular_usuario03"
-                                placeholder="(99) 99999-9999" required />
-                        </div>
-
-                    </div>
-                    <div class="row mt-3">
-                        <div class="col-sm-4">
-                            <label for="nome_usuario04">Integrante 04</label>
-                            <input type="text" name="nome_usuario04" class="" id="nome_usuario04"
-                                placeholder="Digite Aqui..." required />
-                        </div>
-                        <div class="col-sm-4">
-                            <input type="text" name="celular_usuario04" class="" id="celular_usuario04"
-                                placeholder="(99) 99999-9999" required />
-                        </div>
-                    </div>
-
-                    <div class="row mt-3">
-                        <div class="col-sm-4">
-                            <label for="nome_usuario05">Integrante 05</label>
-                            <input type="text" name="nome_usuario05" class="" id="nome_usuario05"
-                                placeholder="Digite Aqui..." required />
-                        </div>
-                        <div class="col-sm-4">
-                            <input type="text" name="celular_usuario05" class="" id="celular_usuario05"
-                                placeholder="(99) 99999-9999" required />
-                        </div>
-                    </div>
-
-                    <div class="mt-4 d-flex gap-2">
-
-                        <button class="" id="buttonEscolher" onclick="EscolherImg()">Escolher
-                            Logo</button>
-                        <input type="hidden" name="txtAcao" value="Cadastrar" />
-                       
-                        <button type="reset" class="btn_cancel">Cancelar</button>
-                          <button class=" btn_cadastra" onclick="Enviar('cadastra')">
-                            Se Inscrever</button>
-
-
-                    </div>
-                </form>
-            </div>
+      <header>
+    <nav class="Nav-bar">
+        
+        <div class="logo">
+            <img src="logoProjectZ.png">
         </div>
 
-        <!-- ------------------------------------------------------------------------- FIM---------------FORMS ------------------------------------------------- -->
-        <!-- FIM CONTAINER ----------------------- -->
-    </div>
+        <div class="Nav-list">
+            <ul>
+                <li class="Nav-item"><a href="#" class="Nav-link">HOME</a></li>
+                <li class="Nav-item"><a href="#" class="Nav-link">SOBRE</a></li>
+                <li class="Nav-item"><a href="#" class="Nav-link">REGRAS</a></li>
+            </ul>
+        </div>
 
-    <script src="main.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
-        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
-        integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz"
-        crossorigin="anonymous"></script>
-    <!-- 
+        <button class="btn_topo" onclick="MenuShow()" style="cursor: pointer;">
+             <i class="fa-solid fa-bars menu_icon" id="menu_icon"></i>
+        </button>
+       
+        
+
+    </nav>
+
+    <div class="Mobile-Menu">
+        <ul>
+            <li class="Nav-item"><a href="#" class="Nav-link">HOME</a></li>
+            <li class="Nav-item"><a href="#" class="Nav-link">SOBRE</a></li>
+            <li class="Nav-item"><a href="#" class="Nav-link">REGRAS</a></li>
+        </ul>
+
+      
+    </div>
+</header>
+
+        <div class="container" style="z-index:8888;">
+            <section id="home_section">
+                <div class="home_content">
+                    <h1><span>CS:GO</span> PROJECT CTRL-Z</h1>
+                    <span class="subtitle">
+                        O maior campeonato de Couter-Strike do Project Ctrl-Z
+                    </span>
+
+
+
+                    <div class="countdown">
+                        <h2>CONTAGEM REGRESSIVA
+                        </h2>
+                        <div class="box">
+                            <span class="value" data-dias>00</span>
+                            <span class="name">DIAS</span>
+                        </div>
+                        <div class="box">
+                            <span class="value" data-hora>00</span>
+                            <span class="name">HORAS</span>
+                        </div>
+                        <div class="box">
+                            <span class="value" data-minutos>00</span>
+                            <span class="name">MINUTOS</span>
+                        </div>
+                        <div class="box">
+                            <span class="value" data-segundos>00</span>
+                            <span class="name">SEGUNDOS</span>
+
+
+                        </div>
+                    </div>
+
+                    <div class="home_buttons">
+                        <button class="btn_home_Se_Increver">Se Increver</button>
+                        <button class="btn_home_Ver_Regras">Ver Regras</button>
+                    </div>
+                </div>
+            </section>
+
+            <section class="home02">
+                <div class="home02_content">
+
+                    <h2><span style="font-size:40px;color : #d946ef;"> SOBRE </span> O CAMPEONATO</h2>
+
+                    <span style="text-align: justify; color: #6d6d6d;">
+                        <b>CS:GO PROJECT CTRL - Z a</b> é um campeonato de Counter-Strike: Global Offensive organizado
+                        por uma
+                        turma de estudantes de Tecnologia da Informação. O projeto tem como objetivo aplicar
+                        conhecimentos de TI
+                        na prática promovendo integração entre os alunos desenvolvimento de habilidades de organização
+                        de
+                        eventos e, claro, muita diversão e competição saudável.
+                    </span>
+
+                </div>
+
+            </section>
+
+            <section class="home03">
+                <div class="home_03_regras_content">
+                  
+                    <div class="home_03_regras_card">
+                        <h1><span>REGRAS</span> DO CAMPEONATO</h1>
+                        <span>
+                           
+                            <b>Rodadas:</b><br>
+                             
+                           <p><i class="fa-solid fa-circle-check"></i> Cada partida vai ter 7 rodadas de 8 minutos.</p>
+                    </span>
+                    <span>
+                           
+                            <b>Mapas:</b><br>
+                             
+                           <p><i class="fa-solid fa-circle-check"></i> De_Dust, De_Dust2, De_Dust2x2, De_Dust2_2x2 e De_Dust2_2x2_Winter</p>
+                    </span>
+                    <span>
+                           
+                            <b>Sistema de Pontuação:</b><br>
+                             
+                        <p> <i class="fa-solid fa-circle-check"></i> Em cada rodada, a equipe deve cumprir o objetivo estabelecido — como plantar ou desarmar a bomba, ou eliminar o time adversário — para conquistar pontos.</p>
+                    </span>
+                      <span>
+                           
+                            <b>Troca de Lados:</b><br>
+                            
+                          <p>  <i class="fa-solid fa-circle-check"></i>Após sete rodadas, as equipes trocam de lado — Terroristas tornam-se Contra-Terroristas e vice-versa.</p>
+                    </span>
+                      <span>
+                           
+                            <b>Comportamento:</b><br><br>
+                            
+                             
+                        <p> <i class="fa-solid fa-circle-check"></i>Os jogadores devem evitar o uso de linguagem ofensiva, discursos de ódio e qualquer tipo de conduta discriminatória.</p>
+                    </span>
+                    </div>
+                </div>
+            </section>
+            <!-------------------------------Contador ------------------------------------------------------>
+
+
+            <!-- ------------------------------------------------------------------------- FORMS ------------------------------------------------- -->
+            <div class="row">
+                <div class="col-sm-12">
+                    <form action="cadastrar.php" method="post" class="" enctype="multipart/form-data ">
+                        <h1 class="text-center">SE INSCREVER</h1>
+
+
+                        <div>
+                            <label for="nome_equipe">Nome Equipe</label>
+                            <input type="text" name="nome_equipe" class="" id="nome_equipe" placeholder="Digite Aqui..."
+                                required />
+
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-4">
+
+
+                                <input type="text" name="campo_img" id="campo_img" style="display:none;">
+
+                            </div>
+                        </div>
+                        <div class="row mt-3">
+                            <div class="col-sm-4">
+                                <label for="nome_usuario01">Integrante 01</label>
+                                <input type="text" name="nome_usuario01" class="" id="nome_usuario01"
+                                    placeholder="Digite Aqui..." required />
+                            </div>
+
+                            <div class="col-sm-4">
+                                <input type="text" name="celular_usuario01" class="" id="celular_usuario01"
+                                    placeholder="(99) 99999-9999" required />
+                            </div>
+                        </div>
+
+                        <!-- Repetição para os outros usuários -->
+                        <div class="row mt-3">
+                            <div class="col-sm-4">
+                                <label for="nome_usuario02">Integrante 02
+                                </label>
+                                <input type="text" name="nome_usuario02" class="" id="nome_usuario02"
+                                    placeholder="Digite Aqui..." required />
+                            </div>
+                            <div class="col-sm-4">
+                                <input type="text" name="celular_usuario02" class="" id="celular_usuario02"
+                                    placeholder="(99) 99999-9999" required />
+                            </div>
+
+                        </div>
+
+                        <div class="row mt-3">
+                            <div class="col-sm-4">
+                                <label for="nome_usuario03">Integrante 03</label>
+                                <input type="text" name="nome_usuario03" class="" id="nome_usuario03"
+                                    placeholder="Digite Aqui..." required />
+                            </div>
+                            <div class="col-sm-4">
+                                <input type="text" name="celular_usuario03" class="" id="celular_usuario03"
+                                    placeholder="(99) 99999-9999" required />
+                            </div>
+
+                        </div>
+                        <div class="row mt-3">
+                            <div class="col-sm-4">
+                                <label for="nome_usuario04">Integrante 04</label>
+                                <input type="text" name="nome_usuario04" class="" id="nome_usuario04"
+                                    placeholder="Digite Aqui..." required />
+                            </div>
+                            <div class="col-sm-4">
+                                <input type="text" name="celular_usuario04" class="" id="celular_usuario04"
+                                    placeholder="(99) 99999-9999" required />
+                            </div>
+                        </div>
+
+                        <div class="row mt-3">
+                            <div class="col-sm-4">
+                                <label for="nome_usuario05">Integrante 05</label>
+                                <input type="text" name="nome_usuario05" class="" id="nome_usuario05"
+                                    placeholder="Digite Aqui..." required />
+                            </div>
+                            <div class="col-sm-4">
+                                <input type="text" name="celular_usuario05" class="" id="celular_usuario05"
+                                    placeholder="(99) 99999-9999" required />
+                            </div>
+                        </div>
+
+                        <div class="mt-4 d-flex gap-2">
+
+                            <button class="" id="buttonEscolher" onclick="EscolherImg()">Escolher
+                                Logo</button>
+                            <input type="hidden" name="txtAcao" value="Cadastrar" />
+
+                            <button type="reset" class="btn_cancel">Cancelar</button>
+                            <button class=" btn_cadastra" onclick="Enviar('cadastra')">
+                                Se Inscrever</button>
+
+
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <!-- ------------------------------------------------------------------------- FIM---------------FORMS ------------------------------------------------- -->
+            <!-- FIM CONTAINER ----------------------- -->
+        </div>
+
+        <footer>
+            <div class="footer_bar">
+                <h1>FOOTER</h1>
+            </div>
+        </footer>
+
+        <script src="main.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+            integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+            integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz"
+            crossorigin="anonymous"></script>
+        <!-- 
          -->
 </body>
 
