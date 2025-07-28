@@ -17,10 +17,6 @@
 </head>
 
 <body>
-    <?php 
-    include_once("carrega_Imagens.php");
-    ?>
-
       <header>
     <nav class="Nav-bar">
         
@@ -46,9 +42,9 @@
 
     <div class="Mobile-Menu">
         <ul>
-            <li class="Nav-item"><a href="#" class="Nav-link">HOME</a></li>
-            <li class="Nav-item"><a href="#" class="Nav-link">SOBRE</a></li>
-            <li class="Nav-item"><a href="#" class="Nav-link">REGRAS</a></li>
+            <li class="Nav-item"><a href="#home_section" class="Nav-link">HOME</a></li>
+            <li class="Nav-item"><a href="#home02_content" class="Nav-link">SOBRE</a></li>
+            <li class="Nav-item"><a href="#home_03_regras_content" class="Nav-link">REGRAS</a></li>
         </ul>
 
       
@@ -56,6 +52,9 @@
 </header>
 
         <div class="container" style="z-index:8888;">
+            <?php
+                include_once("carrega_imagens.php");
+            ?>
             <section id="home_section">
                 <div class="home_content">
                     <h1><span>CS:GO</span> PROJECT CTRL-Z</h1>
@@ -63,7 +62,9 @@
                         O maior campeonato de Couter-Strike do Project Ctrl-Z
                     </span>
 
-
+                    <!-- MODAL -->
+                     
+                     <!-- ------- -->
 
                     <div class="countdown">
                         <h2>CONTAGEM REGRESSIVA
@@ -89,14 +90,14 @@
                     </div>
 
                     <div class="home_buttons">
-                        <button class="btn_home_Se_Increver">Se Increver</button>
-                        <button class="btn_home_Ver_Regras">Ver Regras</button>
+                        <a href="#form"><button class="btn_home_Se_Increver">Se Increver</button></a>
+                            <a href="#home_03_regras_content"><button class="btn_home_Ver_Regras">Ver Regras</button></a>
                     </div>
                 </div>
             </section>
 
             <section class="home02">
-                <div class="home02_content">
+                <div class="home02_content" id="home02_content">
 
                     <h2><span style="font-size:40px;color : #d946ef;"> SOBRE </span> O CAMPEONATO</h2>
 
@@ -115,9 +116,9 @@
             </section>
 
             <section class="home03">
-                <div class="home_03_regras_content">
+                <div class="home_03_regras_content" id="home_03_regras_content" >
                   
-                    <div class="home_03_regras_card">
+                    <div class="home_03_regras_card" >
                         <h1><span>REGRAS</span> DO CAMPEONATO</h1>
                         <span>
                            
@@ -145,9 +146,8 @@
                     </span>
                       <span>
                            
-                            <b>Comportamento:</b><br><br>
-                            
-                             
+                            <b>Comportamento:</b><br>
+                        
                         <p> <i class="fa-solid fa-circle-check"></i>Os jogadores devem evitar o uso de linguagem ofensiva, discursos de ódio e qualquer tipo de conduta discriminatória.</p>
                     </span>
                     </div>
@@ -159,7 +159,7 @@
             <!-- ------------------------------------------------------------------------- FORMS ------------------------------------------------- -->
             <div class="row">
                 <div class="col-sm-12">
-                    <form action="cadastrar.php" method="post" class="" enctype="multipart/form-data ">
+                    <form action="cadastrar.php" method="post" class="" enctype="multipart/form-data " id="form">
                         <h1 class="text-center">SE INSCREVER</h1>
 
 
@@ -262,9 +262,8 @@
         </div>
 
         <footer>
-            <div class="footer_bar">
-                <h1>FOOTER</h1>
-            </div>
+                <span>@COPYRIGTH</span>
+           
         </footer>
 
         <script src="main.js"></script>

@@ -20,10 +20,6 @@ function Enviar(Tipo) {
     alert("Campo 'NOME EQUIPE' Vazio");
     nome_equipe.focus;
     return;
-  } else if (logo_equipe.value === "") {
-    alert("Campo 'Logo EQUIPE' Vazio");
-    logo_equipe.focus;
-    return;
   } else if (nome_usuario01.value === "") {
     alert("Campo 'Nome Usuario 01' Vazio");
     nome_usuario01.focus;
