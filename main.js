@@ -99,3 +99,22 @@ const countdown = () => {
 }
 
 setInterval(countdown, 1000);
+
+
+function MenuShow(){
+    let MenuMobile = document.querySelector('.Mobile-Menu')
+    let MenuIcon = document.querySelector('.menu_icon')
+    if(MenuMobile.classList.contains('open')){
+        MenuMobile.classList.remove('open')
+        MenuIcon.classList.remove('fa-xmark')
+        MenuIcon.classList.add('fa-bars')
+        
+    }else{
+        MenuMobile.classList.add('open')
+        MenuIcon.classList.remove('fa-bars')
+        MenuIcon.classList.add('fa-xmark')
+        
+        
+    }
+    console.log(MenuMobile)
+}
