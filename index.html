@@ -17,6 +17,10 @@
 </head>
 
 <body>
+    <?php 
+    include_once("carrega_Imagens.php");
+    ?>
+
       <header>
     <nav class="Nav-bar">
         
@@ -52,9 +56,119 @@
 </header>
 
         <div class="container" style="z-index:8888;">
-            <?php
-                include_once("carrega_imagens.php");
-            ?>
+
+
+
+
+
+<!-- ------------------------------------------------------------------------ -->
+
+<?php
+include_once("teste_bd.php");
+
+$img = $conn->prepare("SELECT id_logo_equipe, img_logo FROM logos");
+$img->execute();
+$imagens = $img->fetchAll(PDO::FETCH_ASSOC);
+?>
+<style>
+
+</style>
+<!-- Container principal -->
+<div  id="container_max" >
+ <div class="escondido" id="modal" >
+
+  <div class="content">
+    <h2>SELECIONE A LOGO DA SUA EQUIPE</h2>
+
+    <?php foreach ($imagens as $img): ?> 
+      <div class="imagens_modal">
+        <img src="<?= htmlspecialchars($img['img_logo']) ?>"
+             data-id="<?= $img['id_logo_equipe'] ?>"
+             onclick="selecionarImagem(this)">
+      </div>
+    <?php endforeach; ?>
+
+    <!-- Botões -->
+    <div class="buttons_modal">
+      
+
+        <button class="btn_escolher" onclick="confirmaImg()">Escolher</button>
+        <button  class="btn_voltar" onclick="fecha()">Voltar</button>
+      
+    </div>
+
+  </div>
+</div>
+
+<!-- Script para capturar o ID -->
+<script>
+  function selecionarImagem(img) {
+    const id = img.getAttribute('data-id');
+    document.getElementById('campo_img').value = id;
+    
+    // Opcional: destaque visual
+    document.querySelectorAll('img').forEach(i => i.style.border = '2px solid transparent');
+    img.style.border = '2px solid #00e1ff';
+     
+    const campoImg = document.getElementById('campo_img');
+    campoImg.value=id;
+
+    console.log(id)
+
+   
+  } 
+
+function EscolherImg() {
+       const modal = document.getElementById("modal")
+      const container=document.getElementById("container_max")
+       
+      
+      if (modal.classList.contains("escondido")) {
+          modal.classList.remove("escondido");
+          modal.classList.add("visivel");
+         
+        } else {
+          modal.classList.remove("visivel");
+        
+          modal.classList.add("escondido");
+          
+        }
+
+    console.log(modal , container)
+}
+function fecha() {
+      const modal = document.getElementById("modal")
+      modal.classList.remove("visivel")
+         modal.classList.add("escondido");
+         
+}
+<?php
+  $imgPri = $conn->prepare("SELECT id_fk_logo_equipes FROM equipes");
+  $imgPri->execute();
+  ?>
+
+function confirmaImg(img) {
+       const id = img.getAttribute('data-id');
+        document.getElementById('campo_img').value = id;
+
+    document.querySelectorAll('.imagens_modal img').forEach(i => i.style.border = '2px solid transparent');
+    img.style.border = '2px solid #00e1ff';
+
+}
+</script>
+
+
+</div>
+
+<!-- ------------------------------------------------------------------------ -->
+
+
+
+
+
+
+
+
             <section id="home_section">
                 <div class="home_content">
                     <h1><span>CS:GO</span> PROJECT CTRL-Z</h1>
@@ -62,9 +176,7 @@
                         O maior campeonato de Couter-Strike do Project Ctrl-Z
                     </span>
 
-                    <!-- MODAL -->
-                     
-                     <!-- ------- -->
+
 
                     <div class="countdown">
                         <h2>CONTAGEM REGRESSIVA
